@@ -89,7 +89,7 @@ export const BUSINESS_INFO = {
   address: 'Santosh Nagar, Hyderabad, Telangana 500059',
   showroomAddressNote: 'Santosh Nagar, Hyderabad, Telangana 500059',
   mapsSearchUrl:
-    'https://www.google.com/maps/search/?api=1&query=Santosh+Nagar%2C+Hyderabad%2C+Telangana+500059',
+    'https://www.google.com/maps/place/Reliable+Mattress,+Sofas,/@17.3904334,78.4410889,15z/data=!4m6!3m5!1s0x3bcb986e0ae1aaab:0x9b625a297d6ff3b7!8m2!3d17.3491475!4d78.5040216!16s%2Fg%2F11k4zrxns8?entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D',
   emailNote: 'Direct Contact: Via WhatsApp or Contact Form',
   hoursNote: 'Customer Enquiries: Open for consultations via phone & WhatsApp',
 } as const;
