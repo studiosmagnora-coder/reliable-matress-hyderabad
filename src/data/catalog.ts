@@ -86,8 +86,11 @@ export const BUSINESS_INFO = {
   whatsappBaseUrl: 'https://wa.me/917793906631',
   instagramUrl: 'https://www.instagram.com/reliable_mattresses_furniture/',
   instagramHandle: '@reliable_mattresses_furniture',
-  showroomAddressNote: 'Showroom Address: Available on enquiry (Editable placeholder)',
-  emailNote: 'Direct Contact: Via WhatsApp or Contact Form (Editable placeholder)',
+  address: 'Santosh Nagar, Hyderabad, Telangana 500059',
+  showroomAddressNote: 'Santosh Nagar, Hyderabad, Telangana 500059',
+  mapsSearchUrl:
+    'https://www.google.com/maps/search/?api=1&query=Santosh+Nagar%2C+Hyderabad%2C+Telangana+500059',
+  emailNote: 'Direct Contact: Via WhatsApp or Contact Form',
   hoursNote: 'Customer Enquiries: Open for consultations via phone & WhatsApp',
 } as const;
 

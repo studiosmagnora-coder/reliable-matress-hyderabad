@@ -196,43 +196,56 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* Editable Showroom & Map Placeholder (No fabricated address) */}
+            {/* Showroom Address Card */}
             <div className="bg-white rounded-2xl border border-[#222428]/10 p-7 shadow-[0_4px_24px_-6px_rgba(34,36,40,0.06)] flex-1 flex flex-col justify-between">
               <div className="flex items-start gap-3.5">
                 <span className="w-10 h-10 rounded-xl bg-[#F8F8F9] border border-[#222428]/10 text-[#C8141B] flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4" aria-hidden="true" />
                 </span>
                 <div>
-                  <h4 className="font-sans text-base font-bold text-[#222428]">
-                    Showroom Location &amp; Map
+                  <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-[#C8141B]">
+                    SHOWROOM ADDRESS
+                  </p>
+                  <h4 className="font-display text-xl font-normal text-[#222428] mt-1 leading-snug">
+                    {BUSINESS_INFO.address}
                   </h4>
-                  <p className="text-xs text-[#6D6E71] mt-1 leading-relaxed">
-                    {BUSINESS_INFO.showroomAddressNote}. {BUSINESS_INFO.emailNote}.
+                  <p className="text-xs text-[#6D6E71] mt-1.5 leading-relaxed">
+                    {BUSINESS_INFO.hoursNote}.
                   </p>
                 </div>
               </div>
 
-              <div className="mt-5 rounded-xl bg-[#F8F8F9] border border-dashed border-[#6D6E71]/35 p-6 text-center">
-                <p className="text-xs font-semibold text-[#222428]">
-                  Google Maps Embed Placeholder
+              <div className="mt-5 rounded-xl bg-[#F8F8F9] border border-[#222428]/10 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <p className="text-xs text-[#222428]/80 leading-relaxed">
+                  Need landmarks or visiting hours before stopping by?
                 </p>
-                <p className="text-xs text-[#6D6E71] mt-1">
-                  Showroom map coordinates can be embedded here once the physical address is
-                  confirmed.
-                </p>
-                <a
-                  href={buildWhatsAppEnquiryUrl({
-                    productName: 'Showroom Location Enquiry',
-                    customMessage:
-                      'Hello Reliable Mattresses & Furniture, please share your showroom address and location details.',
-                  })}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3.5 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-[#C8141B] hover:underline"
-                >
-                  <span>Request Location on WhatsApp</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
-                </a>
+                <div className="flex flex-wrap items-center gap-3 shrink-0">
+                  <a
+                    href={BUSINESS_INFO.mapsSearchUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#222428] hover:text-[#C8141B] transition-colors"
+                  >
+                    <span>Open in Maps</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                  </a>
+                  <span className="text-[#222428]/20" aria-hidden="true">
+                    |
+                  </span>
+                  <a
+                    href={buildWhatsAppEnquiryUrl({
+                      productName: 'Showroom Directions',
+                      customMessage:
+                        'Hello Reliable Mattresses & Furniture, please share directions to your Santosh Nagar, Hyderabad showroom.',
+                    })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#C8141B] hover:underline"
+                  >
+                    <span>Ask on WhatsApp</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+                  </a>
+                </div>
               </div>
             </div>
           </Reveal>

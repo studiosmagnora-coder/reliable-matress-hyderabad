@@ -11,6 +11,7 @@ import { BedsInteriors } from './components/BedsInteriors';
 import { FurnitureGallery } from './components/FurnitureGallery';
 import { AboutSection } from './components/AboutSection';
 import { FaqSection } from './components/FaqSection';
+import { CustomerReviews } from './components/CustomerReviews';
 import { EnquiryBanner } from './components/EnquiryBanner';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -77,7 +78,10 @@ export default function App() {
         {/* Section 11: Frequently Asked Questions */}
         <FaqSection />
 
-        {/* Section 12: Customer Enquiry / WhatsApp CTA */}
+        {/* Section 12: Google Reviews - What Our Customers Say */}
+        <CustomerReviews />
+
+        {/* Section 13: Customer Enquiry / WhatsApp CTA */}
         <EnquiryBanner />
 
         {/* Section 12: Contact Section */}

@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Phone } from 'lucide-react';
+import { Instagram, MapPin, MessageCircle, Phone } from 'lucide-react';
 import {
   BUSINESS_INFO,
   MATTRESS_MODELS,
@@ -66,6 +66,11 @@ export function Footer() {
               <li>
                 <a href="#faq" className="hover:text-white transition-colors">
                   Care &amp; Warranty FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#reviews" className="hover:text-white transition-colors">
+                  Customer Reviews
                 </a>
               </li>
               <li>
@@ -150,6 +155,16 @@ export function Footer() {
             >
               <Instagram className="w-4 h-4 text-[#C8141B] shrink-0" aria-hidden="true" />
               <span>Instagram</span>
+            </a>
+
+            <a
+              href={BUSINESS_INFO.mapsSearchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2.5 text-sm text-white/80 hover:text-white transition-colors pt-1"
+            >
+              <MapPin className="w-4 h-4 text-[#C8141B] shrink-0 mt-0.5" aria-hidden="true" />
+              <span className="leading-snug">{BUSINESS_INFO.address}</span>
             </a>
           </div>
         </div>
