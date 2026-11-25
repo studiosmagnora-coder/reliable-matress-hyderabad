@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #c8141b;
+  --color-brand-red-dark: #a30f15;
+  --color-brand-red-deep: #8a0d12;
+  --color-slate-grey: #6d6e71;
+  --color-charcoal: #222428;
+  --color-charcoal-dark: #17191c;
+  --color-canvas: #f8f8f9;
+  --color-soft-grey: #f1f2f4;
+
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-canvas);
+    color: var(--color-charcoal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-wrap: balance;
+  }
+
+  h4 {
+    font-family: var(--font-sans);
+    text-wrap: balance;
+  }
+
+  @keyframes heroFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes heroSlowZoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.06);
+    }
+  }
+
+  @keyframes dropdownEnter {
+    from {
+      opacity: 0;
+      transform: translateY(6px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .animate-hero-enter {
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-hero-enter-delay {
+    animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
+  }
+
+  .animate-hero-image {
+    animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+  }
+
+  .animate-hero-bg-zoom {
+    animation: heroSlowZoom 18s ease-out forwards;
+  }
+
+  .animate-dropdown-enter {
+    animation: dropdownEnter 0.18s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .animate-hero-enter,
+    .animate-hero-enter-delay,
+    .animate-hero-image,
+    .animate-hero-bg-zoom,
+    .animate-dropdown-enter {
+      animation: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

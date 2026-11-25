@@ -1,0 +1,6 @@
+{
+  "name": "Reliable Mattresses & Furniture",
+  "description": "Comfort You Can Trust. Quality That Lasts. Mattress manufacturing specialist with six years of orthopedic mattress experience, alongside sofas, beds, headboards, and wall panelling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
